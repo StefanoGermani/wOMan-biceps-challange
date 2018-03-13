@@ -13,14 +13,15 @@ module.exports = (app, config) => {
   const env = process.env.NODE_ENV || 'development';
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development';
-  
-  app.engine('handlebars', exphbs({
+
+  app.engine('hbs', exphbs({
     layoutsDir: config.root + '/app/views/layouts/',
     defaultLayout: 'main',
-    partialsDir: [config.root + '/app/views/partials/']
+    partialsDir: [config.root + '/app/views/partials/'],
+    extname: 'hbs'
   }));
   app.set('views', config.root + '/app/views');
-  app.set('view engine', 'handlebars');
+  app.set('view engine', 'hbs');
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
   app.use(logger('dev'));
