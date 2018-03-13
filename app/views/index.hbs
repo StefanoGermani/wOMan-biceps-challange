@@ -1,0 +1,26 @@
+<div class="row">
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome e Cognome</th>
+        <th scope="col">Ripetute</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Totale</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each concorrenti}}
+        <tr>
+          <th scope="row">{{math @index "+" 1}}</th>
+          <td>{{this.nome}}</td>
+          <td>{{this.ripetute}}</td>
+          <td>{{this.peso}}</td>
+          <td>{{math this.peso "*" this.ripetute}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
