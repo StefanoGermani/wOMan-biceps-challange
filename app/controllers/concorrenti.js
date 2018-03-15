@@ -12,10 +12,9 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  Concorrente.find((err, concorrenti) => {
+  var conc = new Concorrente({ nome: req.body.name, codice: req.body.codice, turno: req.body.turno});
+  conc.save(function(err) {
     if (err) return next(err);
-    res.render('index', {
-      concorrenti: concorrenti
-    });
+    res.render('addConcorrenti');
   });
 });

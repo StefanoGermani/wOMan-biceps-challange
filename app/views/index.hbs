@@ -5,6 +5,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
+        <th scope="col">Codice</th>
         <th scope="col">Nome e Cognome</th>
         <th scope="col">Ripetute</th>
         <th scope="col">Peso</th>
@@ -14,11 +15,12 @@
     <tbody>
       {{#each concorrenti}}
         <tr>
-          <th scope="row">{{math @index "+" 1}}</th>
+          <th scope="row">{{@index}}</th>
+          <td>{{this.codice}}</td>
           <td>{{this.nome}}</td>
           <td>{{this.ripetute}}</td>
           <td>{{this.peso}}</td>
-          <td>{{math this.peso "*" this.ripetute}}</td>
+          <td></td>
         </tr>
       {{/each}}
     </tbody>

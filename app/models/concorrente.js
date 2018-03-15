@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ConcorrenteSchema = new Schema({
+  codice: String,
   nome: String,
   turno: String,
   ripetute: Number,
