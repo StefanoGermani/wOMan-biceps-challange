@@ -12,8 +12,13 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  var conc = new Concorrente({ nome: req.body.name, codice: req.body.codice, turno: req.body.turno});
-  conc.save(function(err) {
+  var conc = new Concorrente({
+    nome: req.body.name,
+    codice: req.body.codice,
+    turno: req.body.turno,
+    dataNascita: req.body.birthday
+  });
+  conc.save(function (err) {
     if (err) return next(err);
     res.render('addConcorrenti');
   });
