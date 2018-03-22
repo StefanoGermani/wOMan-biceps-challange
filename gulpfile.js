@@ -19,6 +19,7 @@ gulp.task('watch', () => {
 gulp.task('develop', () => {
   livereload.listen();
   nodemon({
+    exec: 'node --inspect',
     script: 'app.js',
     ext: 'js coffee handlebars',
     stdout: false
