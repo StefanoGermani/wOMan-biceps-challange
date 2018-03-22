@@ -8,7 +8,7 @@ module.exports = (app) => {
 };
 
 router.get('/', (req, res, next) => {
-  Concorrente.find().sort({ codice: 'desc' }).exec((err, concorrenti) => {
+  Concorrente.find().limit(20).sort({ totale: 'desc' }).exec((err, concorrenti) => {
     if (err) return next(err);
     res.render('index', {
       concorrenti: concorrenti
