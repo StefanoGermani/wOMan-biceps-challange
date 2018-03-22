@@ -7,8 +7,12 @@ const ConcorrenteSchema = new Schema({
   codice: String,
   nome: String,
   turno: String,
-  ripetute: Number,
-  peso: Number
+  ripetute: { type: Number, default: 0 },
+  peso: { type: Number, default: 0 }
+});
+
+ConcorrenteSchema.virtual('totale').get(function () {
+  return this.ripetute * this.peso;
 });
 
 ConcorrenteSchema.virtual('date')
