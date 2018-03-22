@@ -1,5 +1,5 @@
 <div class="row">
-  <table class="table">
+  <table class="table classifica-table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -13,7 +13,7 @@
     <tbody>
       {{#each concorrenti}}
         <tr>
-          <th scope="row">{{@index}}</th>
+          <th scope="row">{{inc @index}}</th>
           <td>{{this.codice}}</td>
           <td>{{this.nome}}</td>
           <td>{{this.ripetute}}</td>
