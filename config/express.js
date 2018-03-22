@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const compress = require('compression');
 const methodOverride = require('method-override');
-const exphbs  = require('express-handlebars');
+const exphbs = require('express-handlebars');
 
 module.exports = (app, config) => {
   const env = process.env.NODE_ENV || 'development';
@@ -18,8 +18,14 @@ module.exports = (app, config) => {
     layoutsDir: config.root + '/app/views/layouts/',
     defaultLayout: 'main',
     partialsDir: [config.root + '/app/views/partials/'],
-    extname: 'hbs'
+    extname: 'hbs',
+    helpers: {
+      inc: (value) => {
+        return parseInt(value) + 1;
+      }
+    },
   }));
+
   app.set('views', config.root + '/app/views');
   app.set('view engine', 'hbs');
 
