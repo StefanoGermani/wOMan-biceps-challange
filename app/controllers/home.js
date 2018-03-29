@@ -9,6 +9,6 @@ module.exports = (app) => {
 
 router.get('/', (req, res, next) => {
   Concorrente.find().distinct('turno').exec()
-    .then((turni) => { res.render('index', { turni }); })
+    .then((turni) => { res.render('index', { turni: turni.sort() }); })
     .catch((err) => next(err));
 });
