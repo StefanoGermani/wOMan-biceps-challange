@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-6 d-flex flex-column">
     <a class="btn btn-primary mb-4" href="/classifica" role="button">Generale</a>
-    <a class="btn btn-primary mb-4" href="/classifica/under25" role="button">Under 25</a>
+    <a class="btn btn-primary mb-4" href="/classifica/under17" role="button">Under 17</a>
     <a class="btn btn-primary mb-4" href="/classifica/over55" role="button">Over 55</a>
   </div>
   <div class="col-6 d-flex flex-column">
     {{#each turni}}
-        <a class="btn btn-primary mb-4" href="/classifica/turno/{{ this }}" role="button">TURNO {{ this }}</a>
-      {{/each}}
+      <a class="btn btn-primary mb-4" href="/classifica/turno/{{ this }}" role="button">TURNO {{ this }}</a>
+    {{/each}}
   </div>
 </div>

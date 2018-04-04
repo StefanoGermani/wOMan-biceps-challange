@@ -26,14 +26,6 @@ const ConcorrenteSchema = new Schema({
     type: Number,
     default: 0
   },
-  peso: {
-    type: Number,
-    default: 0
-  }
-});
-
-ConcorrenteSchema.virtual('totale').get(function () {
-  return this.ripetute * this.peso;
 });
 
 ConcorrenteSchema.virtual('date')

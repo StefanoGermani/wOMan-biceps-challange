@@ -1,26 +1,50 @@
 <div class="row">
-  <table class="table classifica-table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Codice</th>
-        <th scope="col">Nome e Cognome</th>
-        <th scope="col">Ripetute</th>
-        <th scope="col">Peso</th>
-        <th scope="col">Totale</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each concorrenti}}
+  <div class="col-6">
+    <table class="table table-bordered classifica-table">
+      <thead>
         <tr>
-          <th scope="row">{{inc @index}}</th>
-          <td>{{this.codice}}</td>
-          <td>{{this.nome}}</td>
-          <td>{{this.ripetute}}</td>
-          <td>{{this.peso}}</td>
-          <td>{{this.totale}}</td>
+          <th scope="col">#</th>
+          <th scope="col">Codice</th>
+          <th scope="col">Nome e Cognome</th>
+          <th scope="col">Ripetizioni</th>
         </tr>
-      {{/each}}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {{#each concorrenti}}
+          {{!-- {{#if @index < 10}} --}}
+            <tr>
+              <th scope="row">{{inc @index}}</th>
+              <td>{{this.codice}}</td>
+              <td>{{this.nome}}</td>
+              <td>{{this.ripetute}}</td>
+            </tr>
+          {{!-- {{/if}} --}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="col-6">
+    <table class="table table-bordered classifica-table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Codice</th>
+          <th scope="col">Nome e Cognome</th>
+          <th scope="col">Ripetizioni</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each concorrenti}}
+          {{!-- {{#if @index >= 10}} --}}
+            <tr>
+              <th scope="row">{{inc @index}}</th>
+              <td>{{this.codice}}</td>
+              <td>{{this.nome}}</td>
+              <td>{{this.ripetute}}</td>
+            </tr>
+          {{!-- {{/if}} --}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 </div>

@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  Concorrente.update({ codice: req.body.codice }, { $set: { ripetute: req.body.ripetute, peso: req.body.peso }}, (err) => {
+  Concorrente.update({ codice: req.body.codice }, { $set: { ripetute: req.body.ripetute }}, (err) => {
     if (err) return next(err);
     res.render('gara');
   });
