@@ -10,15 +10,13 @@
         </tr>
       </thead>
       <tbody>
-        {{#each concorrenti}}
-          {{!-- {{#if @index < 10}} --}}
-            <tr>
-              <th scope="row">{{inc @index}}</th>
-              <td>{{this.codice}}</td>
-              <td>{{this.nome}}</td>
-              <td>{{this.ripetute}}</td>
-            </tr>
-          {{!-- {{/if}} --}}
+        {{#each concorrenti1}}
+        <tr>
+          <th scope="row">{{inc @index}}</th>
+          <td>{{this.codice}}</td>
+          <td>{{this.nome}}</td>
+          <td>{{this.ripetute}}</td>
+        </tr>
         {{/each}}
       </tbody>
     </table>
@@ -34,15 +32,13 @@
         </tr>
       </thead>
       <tbody>
-        {{#each concorrenti}}
-          {{!-- {{#if @index >= 10}} --}}
-            <tr>
-              <th scope="row">{{inc @index}}</th>
-              <td>{{this.codice}}</td>
-              <td>{{this.nome}}</td>
-              <td>{{this.ripetute}}</td>
-            </tr>
-          {{!-- {{/if}} --}}
+        {{#each concorrenti2}}
+        <tr>
+          <th scope="row">{{inc10 @index}}</th>
+          <td>{{this.codice}}</td>
+          <td>{{this.nome}}</td>
+          <td>{{this.ripetute}}</td>
+        </tr>
         {{/each}}
       </tbody>
     </table>

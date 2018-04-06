@@ -22,6 +22,9 @@ module.exports = (app, config) => {
     helpers: {
       inc: (value) => {
         return parseInt(value) + 1;
+      },
+      inc10: (value) => {
+        return parseInt(value) + 11;
       }
     },
   }));

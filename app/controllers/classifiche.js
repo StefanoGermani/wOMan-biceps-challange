@@ -11,7 +11,8 @@ router.get('/', (req, res, next) => {
   Concorrente.find().limit(20).sort({ ripetute: 'desc' }).exec((err, concorrenti) => {
     if (err) return next(err);
     res.render('classifica', {
-      concorrenti,
+      concorrenti1: concorrenti.slice(0, 10),
+      concorrenti2: concorrenti.slice(10, 21),
       title: `Classifica Generale`
     });
   });
@@ -21,7 +22,8 @@ router.get('/turno/:turno', (req, res, next) => {
   Concorrente.find({ turno: req.params.turno }).limit(20).sort({ ripetute: 'desc' }).exec((err, concorrenti) => {
     if (err) return next(err);
     res.render('classifica', {
-      concorrenti: concorrenti,
+      concorrenti1: concorrenti.slice(0, 10),
+      concorrenti2: concorrenti.slice(10, 21),
       title: `Turno ${req.params.turno}`
     });
   });
@@ -33,7 +35,8 @@ router.get('/over55', (req, res, next) => {
   Concorrente.find().where('dataNascita').lt(date).limit(20).sort({ ripetute: 'desc' }).exec((err, concorrenti) => {
     if (err) return next(err);
     res.render('classifica', {
-      concorrenti: concorrenti,
+      concorrenti1: concorrenti.slice(0, 10),
+      concorrenti2: concorrenti.slice(10, 21),
       title: `Over 55`
     });
   });
@@ -45,7 +48,8 @@ router.get('/under17', (req, res, next) => {
   Concorrente.find().where('dataNascita').gt(date).limit(20).sort({ ripetute: 'desc' }).exec((err, concorrenti) => {
     if (err) return next(err);
     res.render('classifica', {
-      concorrenti: concorrenti,
+      concorrenti1: concorrenti.slice(0, 10),
+      concorrenti2: concorrenti.slice(10, 21),
       title: 'Under 17'
     });
   });
