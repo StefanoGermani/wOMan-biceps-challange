@@ -13,7 +13,8 @@ router.get('/', (req, res, next) => {
     res.render('classifica', {
       concorrenti1: concorrenti.slice(0, 10),
       concorrenti2: concorrenti.slice(10, 21),
-      title: `Classifica Generale`
+      title: `Classifica Generale`,
+      autorefresh: true
     });
   });
 });
@@ -24,7 +25,8 @@ router.get('/turno/:turno', (req, res, next) => {
     res.render('classifica', {
       concorrenti1: concorrenti.slice(0, 10),
       concorrenti2: concorrenti.slice(10, 21),
-      title: `Turno ${req.params.turno}`
+      title: `Turno ${req.params.turno}`,
+      autorefresh: true
     });
   });
 });
@@ -37,7 +39,8 @@ router.get('/over55', (req, res, next) => {
     res.render('classifica', {
       concorrenti1: concorrenti.slice(0, 10),
       concorrenti2: concorrenti.slice(10, 21),
-      title: `Over 55`
+      title: `Over 55`,
+      autorefresh: true
     });
   });
 });
@@ -50,7 +53,8 @@ router.get('/under17', (req, res, next) => {
     res.render('classifica', {
       concorrenti1: concorrenti.slice(0, 10),
       concorrenti2: concorrenti.slice(10, 21),
-      title: 'Under 17'
+      title: 'Under 17',
+      autorefresh: true
     });
   });
 });

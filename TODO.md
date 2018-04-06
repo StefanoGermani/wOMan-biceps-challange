@@ -1,5 +1,3 @@
 - divisione tra le due tabelle della classifica
-- auto aggiornamento
 - loghi sponsor
-- primi 10 su prima tabella, secondi 10 su seconda tabella
 - colori bianco, nero, oro
