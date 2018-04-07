@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "lts/*"
-install: false
+install: true
 deploy:
   provider: heroku
   app: women-biceps-challange
