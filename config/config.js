@@ -18,7 +18,7 @@ const config = {
   production: {
     root: rootPath,
     port: 80,
-    db: process.env.MONGODB_URI
+    db: process.env.MONGOLAB_URI
   }
 };
 
