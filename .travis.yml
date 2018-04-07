@@ -1,4 +1,6 @@
+language: node_js
 deploy:
   provider: heroku
+  app: women-biceps-challange
   api_key:
     secure: MnuGkiIBsbBhvJwQJDjFeydLd8muJD5RQX2umBIq2+mPr8r+9avIiUXeF42UxzgOFa3knfQxmwgG+t7LMiKmR7CyVpOvT4gvsQGwRvqhe/RBq5m/J2Tp5VrR2rgjbpkJ/sqsXDR+cn/NS/Pw/H4skzPLYQ6JJI7+rtalJXqHKrxnPTyvKZWAxZQNWbq3YIBC/7f/lBGcw0omRyDjR0m2YHfzzRv1ZYxwDw4LQvcryEvFx0GQ6T3PR5qOK6qc/WQy/aVyfYvjljK7WBlevHFVVhmZ2T5dNzd40XUssmmh7ymAsB+e8PV7FuK/veRoaClwU4sjA4PgJg+lxIE+b4lKzC/cELkdhCctcPHL1SYTYIcqYdKOGvghMDyuw+IFT4P/giJbkB+2ORPZPleIvjSlceq7keydFiCsDw7a0Kb0FIqhIlxvN3JwCL5HWKuiYqMHoA1wDbIes7EaymFEgBsX4miMceahEs+HkNUaciIrm9p0STFC5jiiD3lqKVS+ITJkDsNRdyvCilK/frF4cBoOZnoLbo9IEDUDOnOKya4Y+/UhuXkYqCkiKMF/F875fSH1ugUeut6w//1N/WIG4TM/3mRRwcCZjtA1rvZ5K6UhGO74qXvGjde/I2iWqSOhB/eubUfGRrIRBlg6mvrzJdk0E7eQh6gdbTzdkcZeL7G9xfY=
