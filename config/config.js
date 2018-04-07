@@ -17,8 +17,8 @@ const config = {
 
   production: {
     root: rootPath,
-    port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/delta-production'
+    port: 80,
+    db: process.env.MONGODB_URI
   }
 };
 
