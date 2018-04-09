@@ -9,6 +9,9 @@ const compress = require('compression');
 const methodOverride = require('method-override');
 const exphbs = require('express-handlebars');
 
+const basic = require('express-authentication-basic');
+
+
 module.exports = (app, config) => {
   const env = process.env.NODE_ENV || 'development';
   app.locals.ENV = env;
@@ -31,6 +34,16 @@ module.exports = (app, config) => {
 
   app.set('views', config.root + '/app/views');
   app.set('view engine', 'hbs');
+
+  // authentication
+  const login = basic(function(challenge, callback) {
+    if (challenge.username === config.username && challenge.password === config.password) {
+      callback(null, true, { user: 'charles' });
+    } else {
+      callback(null, false, { error: 'INVALID_PASSWORD' });
+    }
+  });
+  app.use(login);
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
   app.use(logger('dev'));
