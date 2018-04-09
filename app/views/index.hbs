@@ -1,12 +1,14 @@
 <div class="row">
-  <div class="col-6 d-flex flex-column">
-    <a class="btn btn-primary mb-4" href="/classifica" role="button">Generale</a>
-    <a class="btn btn-primary mb-4" href="/classifica/under17" role="button">Under 17</a>
-    <a class="btn btn-primary mb-4" href="/classifica/over55" role="button">Over 55</a>
+  <div class="col-12 col-md-6 d-flex flex-column">
+    <a class="btn btn-primary mb-4" href="/concorrenti" role="button">Aggiungi concorrente</a>
+    <a class="btn btn-primary mb-4" href="/gara" role="button">Gara</a>
+    <a class="btn btn-primary mb-4" href="/classifica" role="button">Classifiica Generale</a>
+    <a class="btn btn-primary mb-4" href="/classifica/under17" role="button">Classifica Under 17</a>
+    <a class="btn btn-primary mb-4" href="/classifica/over55" role="button">Classifica Over 55</a>
   </div>
-  <div class="col-6 d-flex flex-column">
+  <div class="col-12 col-md-6 d-flex flex-column">
     {{#each turni}}
-      <a class="btn btn-primary mb-4" href="/classifica/turno/{{ this }}" role="button">TURNO {{ this }}</a>
+      <a class="btn btn-primary mb-4" href="/classifica/turno/{{ this }}" role="button">Classifica TURNO {{ this }}</a>
     {{/each}}
   </div>
 </div>
