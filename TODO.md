@@ -1,3 +1,2 @@
-- divisione tra le due tabelle della classifica
 - loghi sponsor
 - colori bianco, nero, oro
